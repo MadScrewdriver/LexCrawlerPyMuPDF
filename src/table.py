@@ -1252,9 +1252,7 @@ def cells_to_tables(page, cells) -> list:
             x1_vals.add(c[2])
             x0_vals.add(c[0])
         if (
-            len(x1_vals) < 2
-            or len(x0_vals) < 2
-            or white_spaces.issuperset(
+            white_spaces.issuperset(
                 page.get_textbox(
                     r,
                     textpage=TEXTPAGE,
