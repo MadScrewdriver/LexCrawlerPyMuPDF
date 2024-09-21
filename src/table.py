@@ -2294,6 +2294,8 @@ def find_tables(
     global CHARS, EDGES
     CHARS = []
     EDGES = []
+    clip = None
+
     old_small = bool(TOOLS.set_small_glyph_heights())  # save old value
     TOOLS.set_small_glyph_heights(True)  # we need minimum bboxes
     if page.rotation != 0:
