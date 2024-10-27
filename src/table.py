@@ -1750,6 +1750,14 @@ class TableFinder:
             for cell_group in cells_to_tables(self.page, self.cells)
         ]
 
+        self.footnotes = self.get_footnotes_marker()
+
+    def get_footnotes_marker(self):
+        for edge in reversed(self.edges):
+            if 142 < edge["width"] < 145 and edge["orientation"] == "h" and edge["x0"] < 100:
+                return edge | {"y": edge["pts"][1][1]}
+        return None
+
     def get_edges(self) -> list:
         settings = self.settings
 
