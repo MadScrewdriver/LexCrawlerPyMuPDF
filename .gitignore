@@ -8,3 +8,4 @@ docs/build
 /dist/
 /mupdf-1.24.9-source/
 /mupdf-1.24.9-source.tar.gz
+_extra*
